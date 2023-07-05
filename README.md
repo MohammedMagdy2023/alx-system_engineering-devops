@@ -1,1 +1,1 @@
-This is the shell basics repo for alx SWE program
+This is the shell basics repository for alx SWE program
