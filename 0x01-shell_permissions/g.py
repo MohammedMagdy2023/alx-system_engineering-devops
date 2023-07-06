@@ -3,7 +3,7 @@ import subprocess
 
 # Set the remote and branch
 remote = 'origin'
-branch = 'main'
+branch = 'master'
 
 subprocess.run(['git', 'add','.'])
 subprocess.run(['git', 'commit','-m', "shell permissions"])
