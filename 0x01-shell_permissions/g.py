@@ -10,5 +10,5 @@ subprocess.run(['git', 'commit','-m', "shell permissions"])
 
 
 # Run the git push command
-#subprocess.run(['git', 'push', remote, branch])
+subprocess.run(['git', 'push', remote, branch])
 
