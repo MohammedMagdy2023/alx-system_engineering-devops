@@ -17,9 +17,9 @@ for file in files:
 
 ################ Git Scripts ###################
 # Set the remote and branch
-origin = str(input("input the origin (defualt main): "))
-branch = str(input("input the branch you want to push to (defualt master): "))
-commit_massage = str(input("input the commit massage you want to commit: "))
+origin = 'origin'#str(input("input the origin (defualt main): "))
+branch = 'master'#str(input("input the branch you want to push to (defualt master): "))
+commit_massage = 'Shell Redirection'#str(input("input the commit massage you want to commit: "))
 
 
 #run the git and the push command
