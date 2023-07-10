@@ -2,8 +2,8 @@
 import os
 import subprocess
 
-print("\033[1;32m Root@GitHub copilot >_")
-print("\033[1;32m created by Mohammed Magdy:) ")
+print("\033[1;32mGitHub copilot >_[0m")
+print("\033[1;32m 	created by Mohammed Magdy:)[0m ")
 ################ Adding permissions ###################
 cwd = os.getcwd()
 files = os.listdir(cwd)
