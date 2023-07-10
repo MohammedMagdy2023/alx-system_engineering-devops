@@ -10,7 +10,7 @@ files = os.listdir(cwd)
 
 
 for file in files:
-	if '~' not in file or file == 'README.md':
+	if '~' not in file or file != 'README.md':
 		os.chmod(file,0o777)
 	else:
 		continue
