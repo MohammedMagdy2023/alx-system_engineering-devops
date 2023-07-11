@@ -1,0 +1,7 @@
+#!/bin/bash
+read -p "Enter The file name you want to create: " FILE_NAME
+touch $FILE_NAME
+echo "#!/bin/bash" > $FILE_NAME
+chmod u+x $FILE_NAME
+echo "DONE:)
+      Have A Nice Day"
