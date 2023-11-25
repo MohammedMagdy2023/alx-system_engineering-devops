@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show your Bash PID made easy 
+pids=$(pgrep -fl bash)
+echo "$pids"
