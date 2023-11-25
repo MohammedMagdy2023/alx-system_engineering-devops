@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# dont stop me now 
+# kill the infine loop
+
 kill "$(pgrep -f 4-to_infinity_and_beyond)"
