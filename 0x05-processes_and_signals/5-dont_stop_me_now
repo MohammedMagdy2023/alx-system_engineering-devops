@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# dont stop me now 
+infinteloop=$(pgrep -f 4-to_infinity_and_beyond)
+kill "$infinteloop"
