@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "What is your commit massage: "
+read COMMIT_MSG
+
+if [ $( shellcheck $1 | wc -w ) -eq 0 ]
+then
+    git add $1 && git commit -m $COMMIT_MSG && git push
+else
+    shellcheck $1
+fi

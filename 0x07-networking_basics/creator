@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#This script creat files and open it in emacs for editing
+
+echo "what is the documentation for this file? "
+read DOCUMENTATION
+touch $1
+chmod +x $1
+echo "#!/usr/bin/env bash" > $1
+echo "# $DOCUMENTATION " >> $1
+emacs $1
+
