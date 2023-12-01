@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# 0-change_your_home_IP
+
+cp /etc/hosts ~/hosts.backup
+echo "127.0.0.2		localhost" > ~/hosts.backup
+echo "8.8.8.8		facebook.com" >> ~/hosts.backup
+cp -f ~/hosts.backup /etc/hosts
