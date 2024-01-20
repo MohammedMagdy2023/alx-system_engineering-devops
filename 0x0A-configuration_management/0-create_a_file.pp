@@ -1,3 +1,5 @@
+#create_a_file 
+
 file { 'school':
 ensure  => 'present',
 path    => '/tmp/school',
