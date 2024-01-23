@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script Fix Docker file to run the apache2 
+
+echo "ServerName localhost" >> /etc/apache2.conf
+service apache2 start
