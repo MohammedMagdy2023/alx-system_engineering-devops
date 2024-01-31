@@ -1,11 +1,8 @@
 # Install flask V(2.1.0)
 
-class { 'python':
-  version => '3',
-  pip     => 'present',
+exec { 'install python packages':
+  command => 'pip3 install Flask==2.1.0',
+  path => ['/usr/bin/'],
+  unless => '/usr/bin/test -f /usr/local/lib/python3.4/dist-packages/flask/app.py'
 }
 
-python::pip3 { 'flask':
-  ensure  => '2.1.0',
-  pkgname => 'Flask',
-}
