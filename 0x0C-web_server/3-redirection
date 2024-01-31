@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This File Installs NGINX and setup redirect
+
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.html
+
+sed -i "37i\ \n\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/dQw4w9WgXcQ; \n\t}\n" "/etc/nginx/sites-available/default"
+
+
+
+
+
+service nginx restart
