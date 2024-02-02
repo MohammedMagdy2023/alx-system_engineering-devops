@@ -1,3 +1,4 @@
+#install nginx on servers
 class { 'stdlib': }
 
 package { 'nginx':
