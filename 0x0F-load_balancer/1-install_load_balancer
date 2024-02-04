@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# install HAproxy LoadBalancer
+sudo apt-get update
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.8
+sudo apt-get install haproxy=2.8.\*
+
+# Configure HAProxy to send traffic to web-01 and web-02 using roundrobin
+sudo tee /etc/haproxy/haproxy.cfg <<EOF
+frontend idroid
+         timeout client 60s
+         bind *:80
+         mode http
+         default_backend web_servers
+
+backend web_servers
+        timeout connect 10s
+        timeout server 100s
+        mode http
+        server web-01 100.25.141.227
+        server web-02 100.27.13.92
+        balance roundrobin
+
+EOF
+
+# Restart HAProxy service
+sudo systemctl restart haproxy
+
+# Enable HAProxy service to start on boot
+sudo systemctl enable haproxy
