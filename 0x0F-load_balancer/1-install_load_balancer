@@ -6,8 +6,8 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.8
 sudo apt-get install haproxy=2.8.\*
 
 # Configure HAProxy to send traffic to web-01 and web-02 using roundrobin
-sudo tee /etc/haproxy/haproxy.cfg <<EOF
-frontend idroid
+sudo tee /etc/haproxy/haproxy.cfg 
+printf %s "frontend idroid
          timeout client 60s
          bind *:80
          mode http
@@ -19,9 +19,8 @@ backend web_servers
         mode http
         server web-01 100.25.141.227:80 check
         server web-02 100.27.13.92:80 check
-        balance roundrobin
+        balance roundrobin">> /etc/haproxy/haproxy.cfg
 
-EOF
 
 # Restart HAProxy service
 sudo systemctl restart haproxy
