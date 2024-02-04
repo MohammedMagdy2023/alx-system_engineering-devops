@@ -17,8 +17,8 @@ backend web_servers
         timeout connect 10s
         timeout server 100s
         mode http
-        server web-01 100.25.141.227
-        server web-02 100.27.13.92
+        server web-01 100.25.141.227:80 check
+        server web-02 100.27.13.92:80 check
         balance roundrobin
 
 EOF
