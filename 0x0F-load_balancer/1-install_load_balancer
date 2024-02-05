@@ -33,8 +33,8 @@ listen idroid
     balance roundrobin
     option httpclose
     option forwardfor
-    server web-01 100.25.141.227 check
-    server web-02 100.27.13.92 check
+    server web-01 100.25.141.227:80 check
+    server web-02 100.27.13.92:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 
