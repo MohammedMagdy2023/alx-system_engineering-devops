@@ -30,8 +30,10 @@ Examples
 - `ufw [delete] allow in proto udp from 193.204.114.105 to 12.34.56.78 port 123`
 
 
+
 Enable Packet Forwarding Open the UFW network variables file /etc/ufw/sysctl.conf with a text editor1. Uncomment net/ipv4/ip_forward=1. 
 This can be done by running the following command:
+---
 
 `|   sudo nano /etc/ufw/sysctl.conf`
 
