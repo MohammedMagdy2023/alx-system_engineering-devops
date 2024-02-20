@@ -34,7 +34,7 @@ if __name__ == "__main__":
         print("Could not get the TODO list")
         sys.exit(1)
 
-    print("Employee {} is completed with tasks({}/{}):"
+    print("Employee {} is done with tasks({}/{}):"
           .format(emp_name, completed_tasks, total_tasks))
     for title in completed_titles:
         print("\t " + title)
