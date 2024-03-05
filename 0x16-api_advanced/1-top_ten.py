@@ -18,4 +18,4 @@ def top_ten(subreddit):
         for i in range(10):
             print(data['data']['children'][i]['data']['title'])
     else:
-        print(None)
+        return None
