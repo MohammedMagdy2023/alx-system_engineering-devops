@@ -6,7 +6,7 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    # Set a custom user-agent to avoid errors
+    """The function to use to return top10 posts of the subreddit"""
     headers = {'User-Agent': 'ALX_Student'}
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
     response = requests.get(url, headers=headers)
